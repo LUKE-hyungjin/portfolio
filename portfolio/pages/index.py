@@ -1,6 +1,6 @@
 import reflex as rx
-from ..components.sections.home import home_section
-from ..components.sections.about import about_section
+from ..components.index_sections.home import home_section
+from ..components.index_sections.about import about_section
 # from ..components.sections.skills import skills_section
 
 def index() -> rx.Component:
