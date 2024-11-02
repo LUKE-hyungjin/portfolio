@@ -27,6 +27,7 @@ def home_section() -> rx.Component:
                         "Hi! I'm Hyungjin Lee.",
                         size="9",
                         weight="bold",
+                        text_align="center",
                         style={
                             "position": "relative",
                             "top": "70px",
@@ -35,14 +36,20 @@ def home_section() -> rx.Component:
                     rx.text(
                         "I am a student studying the fusion of machines and computers.",
                         size="7",
+                        text_align="center",
                         style={
                             "position": "relative",
                             "top": "80px",
                         }
                     ),
-                    rx.hstack(
+                    rx.flex(
                         rx.button("Contact", on_click=scroll_to("section1")),
                         rx.button("Download CV"),
+                        gap="6",
+                        wrap="wrap",
+                        spacing="6",
+                        justify="center",
+                        width="100%",
                         style={
                             "position": "relative",
                             "top": "80px",

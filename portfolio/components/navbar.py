@@ -21,16 +21,18 @@ def navbar() -> rx.Component:
                 rx.hstack(
                     rx.link(rx.text("Home", size="4", weight="medium", on_click=scroll_to("home"))),
                     rx.link(rx.text("About", size="4", weight="medium", on_click=scroll_to("about"))),
-                    rx.link(rx.text("Skill", size="4", weight="medium", on_click=scroll_to("section3"))),
-                    rx.link(rx.text("My Work", size="4", weight="medium", on_click=scroll_to("section1"))),
-                    rx.link(rx.text("Contact", size="4", weight="medium", on_click=scroll_to("section1"))),
+                    rx.link(rx.text("Skill", size="4", weight="medium", on_click=scroll_to("skills"))),
+                    rx.link(rx.text("My Work", size="4", weight="medium", on_click=scroll_to("work"))),
+                    rx.link(rx.text("Contact", size="4", weight="medium", on_click=scroll_to("contact"))),
                     justify="end",
                     spacing="5",
                 ),
                 justify="between",
                 align_items="center",
             ),
+        ),
             rx.mobile_and_tablet(
+            rx.hstack(
                 rx.hstack(
                     rx.image(
                         src="/favicon.png",
@@ -38,17 +40,21 @@ def navbar() -> rx.Component:
                         height="auto",
                         border_radius="25%",
                     ),
-                    rx.heading("Reflex", size="6", weight="bold"),
+                    rx.heading(
+                        "LUKE", size="6", weight="bold"
+                    ),
                     align_items="center",
                 ),
                 rx.menu.root(
-                    rx.menu.trigger(rx.icon("menu", size=30)),
+                    rx.menu.trigger(
+                        rx.icon("menu", size=30)
+                    ),
                     rx.menu.content(
-                        rx.menu.item("Home"),
-                        rx.menu.item("About"),
-                        rx.menu.item("Skill"),
-                        rx.menu.item("My Work"),
-                        rx.menu.item("Contact"),
+                        rx.menu.item("Home", on_click=scroll_to("home")),
+                        rx.menu.item("About", on_click=scroll_to("about")),
+                        rx.menu.item("Skill", on_click=scroll_to("skills")),
+                        rx.menu.item("My Work", on_click=scroll_to("work")),
+                        rx.menu.item("Contact", on_click=scroll_to("contact")),
                     ),
                     justify="end",
                 ),

@@ -5,8 +5,7 @@ navbar_style = {
             "width": "100%",
             "zIndex": "3",
             "background": "rgba(38, 67, 86, 0.8)",  # 초기에는 투명한 배경
-            "padding": "20px",
-            "transition": "background 0.3s ease",  # 배경색 변경 애니메이션 추가
+            "padding": "1em",
         }
 
 background_image_style = {
@@ -41,4 +40,9 @@ about_title_style = {
     "font-size": "80px",
     "color": "#000000",
     "top": "40px"
+}
+
+previous_font_style = {
+    "font-size": "15px",
+    "color": "#7c7979"
 }
