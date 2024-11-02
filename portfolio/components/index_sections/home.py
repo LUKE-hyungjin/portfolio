@@ -44,7 +44,12 @@ def home_section() -> rx.Component:
                     ),
                     rx.flex(
                         rx.button("Contact", on_click=scroll_to("section1")),
-                        rx.button("Download CV"),
+                        rx.link(  # button을 link로 감싸기
+                            rx.button("Download CV"),
+                            href="/CV.pdf",  # assets 폴더의 파일 경로
+                            is_external=True,  # 새 탭에서 열기
+                            download=True,  # 다운로드 속성 추가
+                        ),
                         gap="6",
                         wrap="wrap",
                         spacing="6",

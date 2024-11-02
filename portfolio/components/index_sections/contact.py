@@ -37,7 +37,7 @@ def contact_section() -> rx.Component:
                         ),
                         align_items="center",
                     ),
-                    href="https://github.com/leehyeongjin1",
+                    href="https://github.com/LUKE-hyungjin",
                     is_external=True,
                 ),
                 rx.link(

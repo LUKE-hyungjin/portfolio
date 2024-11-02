@@ -66,6 +66,14 @@ def about_section() -> rx.Component:
     ai_skills = ["Numpy", "Tensorflow", "Pytorch", "Reinforcement Learning"]
     mech_skills = ["Mechanics of Materials", "Dynamics", "Thermodynamics", "Fluid Mechanics"]
 
+    # 경력/학력 정보를 딕셔너리로 구조화
+    experiences = {
+        "BS : Kyonggi University(Mechanical Engineering)": "2018 - 2022",
+        "SD solution Intern": "2021.01 - 2021.02",
+        "Computer Aided Engineering Lab Undergraduate Researcher": "2020.08 - 2022.02",
+        "Air Force Officer(Software Engineer)": "2022.08 - Present",
+    }
+
     return rx.box(
         rx.vstack(
             rx.heading(
@@ -92,6 +100,24 @@ def about_section() -> rx.Component:
                 wrap="wrap",
                 padding=["1em", "2em", "2em"],
             ),
+            # 경력/학력 정보 출력
+            *[
+                rx.vstack(
+                    rx.text(
+                        title,
+                        color="black" if i == 0 or i == len(experiences) - 1 else "gray",  # 첫/마지막 항목은 검정, 나머지는 회색
+                        font_weight="bold" if i == 0 or i == len(experiences) - 1 else "normal",  # 첫/마지막 항목은 볼드체
+                    ),
+                    rx.text(
+                        period,
+                        color="black" if i == 0 or i == len(experiences) - 1 else "gray",  # 첫/마지막 항목은 검정, 나머지는 회색
+                    ),
+                    spacing="0.5em",
+                    margin_bottom="1em",
+                    align_items="center",
+                )
+                for i, (title, period) in enumerate(experiences.items())  # enumerate로 인덱스 추가
+            ],
             align_items="center",
             padding=["2em", "2em", "4em"],
             width="100%",
