@@ -5,7 +5,7 @@ def contact_section() -> rx.Component:
         rx.vstack(
             rx.heading(
                 "Let's talk",
-                size="2xl",
+                size="1",
                 margin_bottom="1em",
                 style={
                     "color": "white",
@@ -14,7 +14,7 @@ def contact_section() -> rx.Component:
             ),
             rx.heading(
                 "e93052080@gmail.com",
-                size="lg",
+                size="3",
                 margin_bottom="2em",
                 style={
                     "color": "white",

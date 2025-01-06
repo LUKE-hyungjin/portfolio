@@ -22,7 +22,7 @@ def skill_bar(skill_name: str, percentage: int) -> rx.Component:
             border_radius="5px",
         ),
         width="100%",
-        spacing="1em",
+        spacing="4",
     )
 
 def skills_section() -> rx.Component:
@@ -30,7 +30,7 @@ def skills_section() -> rx.Component:
         rx.vstack(
             rx.heading(
                 "Skills", 
-                size="2em", 
+                size="8", 
                 margin_bottom="0.5em", 
                 style={
                     "color": "#000000", 
@@ -39,7 +39,7 @@ def skills_section() -> rx.Component:
             ),
             rx.heading(
                 "Skills & Attributes", 
-                size="xl", 
+                size="2", 
                 margin_bottom="1em", 
                 style={
                     "color": "#000000", 
@@ -62,7 +62,7 @@ def skills_section() -> rx.Component:
                         rx.heading(
                             "Skills", 
                             color="white", 
-                            size="2em", 
+                            size="8", 
                             margin_bottom="1.5em", 
                             style={"font-size": ["25px", "32px", "40px"]}
                         ),
@@ -76,7 +76,7 @@ def skills_section() -> rx.Component:
                         rx.heading(
                             "Tools", 
                             color="white", 
-                            size="2em", 
+                            size="8", 
                             margin_bottom="0.8em", 
                             align_self="center", 
                             style={"font-size": ["25px", "32px", "40px"]}
@@ -86,13 +86,13 @@ def skills_section() -> rx.Component:
                             rx.text("Fusion 360", color="white", font_size=["1.2em", "1.3em", "1.5em"]),
                             rx.text("Ansys", color="white", font_size=["1.2em", "1.3em", "1.5em"]),
                             rx.text("Visual Studio Code", color="white", font_size=["1.2em", "1.3em", "1.5em"]),
-                            spacing="1em",
+                            spacing="4",
                             align_items="center"
                         ),
                         rx.heading(
                             "Etc", 
                             color="white", 
-                            size="2em", 
+                            size="8", 
                             margin_top="2em", 
                             margin_bottom="0.8em", 
                             align_self="center", 

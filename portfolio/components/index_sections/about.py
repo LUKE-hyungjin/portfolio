@@ -25,7 +25,7 @@ def skill_category(title: str, icon_name: str, skills: list[str]) -> rx.Componen
         circle_icon(icon_name),
         rx.heading(
             title,
-            size="lg",
+            size="3",
             margin_bottom="1em",
             white_space="pre-wrap",
             text_align="center",
@@ -51,7 +51,7 @@ def skill_category(title: str, icon_name: str, skills: list[str]) -> rx.Componen
                 ) 
                 for skill in skills
             ],
-            spacing="0.5em",
+            spacing="2",
             min_height="200px",
             justify_content="flex-start",
         ),
@@ -78,7 +78,7 @@ def about_section() -> rx.Component:
         rx.vstack(
             rx.heading(
                 "About me",
-                size="2xl",
+                size="1",
                 margin_bottom="0.5em",
                 text_align="center",
                 style={"color": "#000000", "font-size": ["50px", "60px", "80px"]},
@@ -112,7 +112,7 @@ def about_section() -> rx.Component:
                         period,
                         color="black" if i == 0 or i == len(experiences) - 1 else "gray",  # 첫/마지막 항목은 검정, 나머지는 회색
                     ),
-                    spacing="0.5em",
+                    spacing="2",
                     margin_bottom="1em",
                     align_items="center",
                 )

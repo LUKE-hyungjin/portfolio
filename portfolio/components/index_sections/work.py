@@ -34,8 +34,8 @@ def project_card(href: str, img_src: str, title: str, description: str, data_typ
                 justify_content="center",
             ),
             rx.box(
-                rx.heading(title, size="sm"),
-                rx.text(description, font_size="sm"),
+                rx.heading(title, size="5"),
+                rx.text(description, font_size="5"),
                 padding="0.75em",
                 background="rgba(0, 0, 0, 0.75)",
                 color="white",
@@ -48,7 +48,7 @@ def project_card(href: str, img_src: str, title: str, description: str, data_typ
             ),
             position="relative",
             overflow="hidden",
-            border_radius="lg",
+            border_radius="3",
             width="100%",
             min_width="280px",
             min_height="250px",
@@ -81,7 +81,7 @@ def category_button(text: str, count: int, filter_value: str) -> rx.Component:
         _hover={"bg": "blue.600"},
         padding="0.8em 1.5em",
         font_size="1.1em",
-        border_radius="lg",
+        border_radius="3",
         min_width="150px",
     )
 
@@ -98,8 +98,8 @@ def work_section() -> rx.Component:
 
     return rx.box(
         rx.vstack(
-            rx.heading("My Work", size="2xl", margin_bottom="0.5em", style={"color": "#000000","font-size": "80px"}),
-            rx.heading("Projects", size="xl", margin_bottom="1em", style={"color": "#000000","font-size": "40px"}),
+            rx.heading("My Work", size="1", margin_bottom="0.5em", style={"color": "#000000","font-size": "80px"}),
+            rx.heading("Projects", size="2", margin_bottom="1em", style={"color": "#000000","font-size": "40px"}),
             rx.flex(
                 category_button("All", len(projects), "*"),
                 category_button("Coding", len([p for p in projects if p["type"] == "coding"]), "coding"),
